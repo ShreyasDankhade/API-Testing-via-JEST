@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "67a42587-7192-4104-a2c3-6d33ced321d6",
+		"name": "MAIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23088219"
+	},
+	"item": [
+		{
+			"name": "EXAM_TRADE",
+			"item": [
+				{
+					"name": "create Exam trade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQyLCJyb2xlIjoiU1VQRVIgQURNSU4iLCJpYXQiOjE2NjI0Nzg1NzB9.DM79C-cZv6lMorVeamcfh7EnTAsgVC0BAXy2v1OZL0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \r\n    \"id\": 19,\r\n    \"examId\": 8,\r\n    \"tradeName\":\"Chemical Engineering\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}examTrade/createExamTrade",
+							"host": [
+								"{{baseUrl}}examTrade"
+							],
+							"path": [
+								"createExamTrade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Exam Trade",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQyLCJyb2xlIjoiU1VQRVIgQURNSU4iLCJpYXQiOjE2NjI0Nzg1NzB9.DM79C-cZv6lMorVeamcfh7EnTAsgVC0BAXy2v1OZL0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}examTrade/getAllExamTrade",
+							"host": [
+								"{{baseUrl}}examTrade"
+							],
+							"path": [
+								"getAllExamTrade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get By Id Exam Trade",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "default"
+							},
+							{
+								"key": "authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQyLCJyb2xlIjoiU1VQRVIgQURNSU4iLCJpYXQiOjE2NjI0Nzg1NzB9.DM79C-cZv6lMorVeamcfh7EnTAsgVC0BAXy2v1OZL0s",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}examTrade/getById/15",
+							"host": [
+								"{{baseUrl}}examTrade"
+							],
+							"path": [
+								"getById",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update exam Trade",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQyLCJyb2xlIjoiU1VQRVIgQURNSU4iLCJpYXQiOjE2NjI0Nzg1NzB9.DM79C-cZv6lMorVeamcfh7EnTAsgVC0BAXy2v1OZL0s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"examId\": 3,\r\n    \"tradeName\": \"Automobile Engineering\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}examTrade/updateExamTrade/6",
+							"host": [
+								"{{baseUrl}}examTrade"
+							],
+							"path": [
+								"updateExamTrade",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Exam Trade",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}examTrade/deleteExamTrade/14",
+							"host": [
+								"{{baseUrl}}examTrade"
+							],
+							"path": [
+								"deleteExamTrade",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JOB_POST",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T1}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"companyId\": \"9\",\r\n            \"jobTitle\": \"\",\r\n            \"jobDesc\": \"\",\r\n            \"jobLocation\": \"\",\r\n            \"linkToApply\": \"\",\r\n            \"jobSource\": \"\",\r\n            \"educationType\": \"Engineering\",\r\n            \"requiredExperience\": true,\r\n            \"totalNoOfVaccancies\": 2,\r\n            \"jobPostedDate\": \"2022-09-07T07:54:59.019Z\",\r\n            \"lastDateToApply\": \"2022-11-23\",\r\n            \"courseType\": \"\",\r\n            \"salary\": \"\",\r\n            \"status\": \"ACTIVE\",\r\n            \"isPremium\": \"ACTIVE\",\r\n            \"skillAssessment\": false\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}jobPost/createJobPost",
+							"host": [
+								"{{baseUrl}}jobPost"
+							],
+							"path": [
+								"createJobPost"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "{{A}}",
+										"value": "{{T}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n      \r\n                \"companyId\": 2,\r\n                \"jobTitle\": \"software Engineer\",\r\n                \"jobDesc\": \"vsadgdg\",\r\n                \"jobLocation\": \"pune\",\r\n                \"educationType\": \"Diploma\",\r\n                \"requiredExperience\": true,\r\n                \"totalNoOfVaccancies\": 7,\r\n                \"jobPostedDate\": \"2019-08-12T00:00:00.000Z\",\r\n                \"lastDateToApply\": \"2019-08-12T00:00:00.000Z\",\r\n                \"courseType\": \"cse\"\r\n            }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/jobPost/createJobPost",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"jobPost",
+										"createJobPost"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "431"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1af-AZ1pQ7d/7ug9WyPxUwmk5r7FyE0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 12:50:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"message\": \"The JobPost details added successfully\",\n        \"createObj\": {\n            \"requiredExperience\": true,\n            \"id\": 2,\n            \"companyId\": 2,\n            \"jobTitle\": \"software Engineer\",\n            \"jobDesc\": \"vsadgdg\",\n            \"jobLocation\": \"pune\",\n            \"educationType\": \"Diploma\",\n            \"totalNoOfVaccancies\": 7,\n            \"jobPostedDate\": \"2019-08-12T00:00:00.000Z\",\n            \"lastDateToApply\": \"2019-08-12T00:00:00.000Z\",\n            \"courseType\": \"cse\",\n            \"updatedAt\": \"2022-01-31T12:50:56.810Z\",\n            \"createdAt\": \"2022-01-31T12:50:56.810Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}jobPost/getAllJobPost?page=1&pagesize=10&search=",
+							"host": [
+								"{{baseUrl}}jobPost"
+							],
+							"path": [
+								"getAllJobPost"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagesize",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "job by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}jobPost/getJobById/61",
+							"host": [
+								"{{baseUrl}}jobPost"
+							],
+							"path": [
+								"getJobById",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by companyId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/jobPost/getJobPostByCompanyId/7?page=1&pageSize=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobPost",
+								"getJobPostByCompanyId",
+								"7"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "raipur",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pdate status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}jobPost/updateStatus/72",
+							"host": [
+								"{{baseUrl}}jobPost"
+							],
+							"path": [
+								"updateStatus",
+								"72"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 58,\r\n    \"companyId\": 9,\r\n    \"jobTitle\": \"WEB DEVELOPER\",\r\n    \"jobDesc\": \"Web development via HTML, CSS & JAVASCRIPT.\",\r\n    \"jobLocation\": \"BANGLORE\",\r\n    \"linkToApply\": \"\",\r\n    \"jobSource\": \"\",\r\n    \"educationType\": \"Engineering\",\r\n    \"requiredExperience\": true,\r\n    \"totalNoOfVaccancies\": 2,\r\n    \"jobPostedDate\": \"2022-09-07 07:54:59\",\r\n    \"lastDateToApply\": \"2022-11-23\",\r\n    \"courseType\": \"Computer Engineering\",\r\n    \"salary\": \"10 Lacs\",\r\n    \"status\": \"ACTIVE\",\r\n    \"isPremium\": \"ACTIVE\",\r\n    \"skillAssessment\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/jobPost/updateJobPost/58",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobPost",
+								"updateJobPost",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "{{A}}",
+								"value": "{{T}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/jobPost/deleteJobPost/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"jobPost",
+								"deleteJobPost",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "A",
+			"value": "authorization",
+			"type": "string"
+		},
+		{
+			"key": "T",
+			"value": "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQyLCJyb2xlIjoiU1VQRVIgQURNSU4iLCJpYXQiOjE2NjI0Nzg1NzB9.DM79C-cZv6lMorVeamcfh7EnTAsgVC0BAXy2v1OZL0s",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://156.67.219.134:6060/api/v1/admin/",
+			"type": "string"
+		}
+	]
+}

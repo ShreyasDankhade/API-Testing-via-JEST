@@ -1,0 +1,232 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+#jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/** SUMMARY */
+#summary {
+  color: #333;
+  margin: 2rem 0;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: #4f8a10;
+  border-left: 0.4rem solid #4f8a10;
+  padding-left: 0.5rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: #d8000c;
+  border-left: 0.4rem solid #d8000c;
+  padding-left: 0.5rem;
+}
+.summary-pending {
+  color: #9f6000;
+  border-left: 0.4rem solid #9f6000;
+  padding-left: 0.5rem;
+}
+.summary-empty {
+  color: #999;
+  border-left: 0.4rem solid #999;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+.test-result.failed {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.test-result.pending {
+  background-color: #ffdf61;
+  color: #9f6000;
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #d8000c;
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 2rem;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: #eee;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+  background-color: #d8000c;
+  color: #fff;
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: #777;
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><div id="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2022-09-10 05:09:38</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (2)</div><div class="summary-passed">2 passed</div><div class="summary-failed summary-empty">0 failed</div><div class="summary-pending summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (81)</div><div class="summary-passed">81 passed</div><div class="summary-failed summary-empty">0 failed</div><div class="summary-pending summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\SHREYAS DANKHADE\OneDrive\Desktop\NOTES\JAVASCRIPT\api_testing\MAIN_TESTING\exam_trade.test.js</div><div class="suite-time warn">8.893s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">EXAM REGISTRATION</div><div class="test-title">new exam</div><div class="test-status">passed</div><div class="test-duration">0.372s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">EXAM REGISTRATION</div><div class="test-title">To Fetch the Exam_id</div><div class="test-status">passed</div><div class="test-duration">0.407s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.344s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_EMAIL</div><div class="test-status">passed</div><div class="test-duration">0.16s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_PASSWORD</div><div class="test-status">passed</div><div class="test-duration">0.191s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">To Fetch the Last_Exam_Trade</div><div class="test-status">passed</div><div class="test-duration">0.144s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE --pass</div><div class="test-status">passed</div><div class="test-duration">0.157s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.146s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.153s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE -fail --NO_id</div><div class="test-status">passed</div><div class="test-duration">0.136s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE -fail --NO_examId</div><div class="test-status">passed</div><div class="test-duration">0.163s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Exam_Trade</div><div class="test-title">CREATE_EXAM_TRADE -fail --NO_id,examId,tradeName</div><div class="test-status">passed</div><div class="test-duration">0.36s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade</div><div class="test-title">GET_ALL_EXAM_TRADE --pass</div><div class="test-status">passed</div><div class="test-duration">0.35s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade</div><div class="test-title">GET_ALL_EXAM_TRADE -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.14s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade</div><div class="test-title">GET_ALL_EXAM_TRADE -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.152s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade_By_ID</div><div class="test-title">GET_ALL_EXAM_TRADE_BY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.16s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade_By_ID</div><div class="test-title">GET_ALL_EXAM_TRADE_BY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.354s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade_By_ID</div><div class="test-title">GET_ALL_EXAM_TRADE_BY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade_By_ID</div><div class="test-title">GET_ALL_EXAM_TRADE_BY_ID -fail --NO_ID_MENTIONED</div><div class="test-status">passed</div><div class="test-duration">0.152s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Exam_Trade_By_ID</div><div class="test-title">GET_ALL_EXAM_TRADE_BY_ID -fail --ID_DOESN'T_EXIST</div><div class="test-status">passed</div><div class="test-duration">0.335s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Exam_Trade_By_ID</div><div class="test-title">UPDATE_EXAM_TRADE_BY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.135s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Exam_Trade_By_ID</div><div class="test-title">UPDATE_EXAM_TRADE_BY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.142s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Exam_Trade_By_ID</div><div class="test-title">UPDATE_EXAM_TRADE_BY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.154s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Exam_Trade_By_ID</div><div class="test-title">UPDATE_EXAM_TRADE_BY_ID -fail --RANDOM_HARD-CODED_TOKEN</div><div class="test-status">passed</div><div class="test-duration">0.347s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Exam_Trade_By_ID</div><div class="test-title">UPDATE_EXAM_TRADE_BY_ID -fail --NO_ID_MENTIONED</div><div class="test-status">passed</div><div class="test-duration">0.152s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Exam_Trade_By_ID</div><div class="test-title">DELETE_EXAM_TRADE_BY_ID -pass</div><div class="test-status">passed</div><div class="test-duration">0.361s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Exam_Trade_By_ID</div><div class="test-title">DELETE_EXAM_TRADE_BY_ID fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.344s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Exam_Trade_By_ID</div><div class="test-title">DELETE_EXAM_TRADE_BY_ID fail --UNAUTHORIZATION</div><div class="test-status">passed</div><div class="test-duration">0.342s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Exam_Trade_By_ID</div><div class="test-title">DELETE_EXAM_TRADE_BY_ID fail --RANDOM_HARD-CODED_TOKEN</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Exam_Trade_By_ID</div><div class="test-title">DELETE_EXAM_TRADE_BY_ID fail --ID_DOESN'T_EXIST</div><div class="test-status">passed</div><div class="test-duration">0.162s</div></div></div></div></div><div id="suite-2" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\SHREYAS DANKHADE\OneDrive\Desktop\NOTES\JAVASCRIPT\api_testing\MAIN_TESTING\job_post.test.js</div><div class="suite-time warn">14.406s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">EXAM REGISTRATION</div><div class="test-title">new exam</div><div class="test-status">passed</div><div class="test-duration">0.372s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">EXAM REGISTRATION</div><div class="test-title">To check the jobPostid</div><div class="test-status">passed</div><div class="test-duration">0.412s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_EMAIL</div><div class="test-status">passed</div><div class="test-duration">0.153s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Super_Admin_Login</div><div class="test-title">SUPER_ADMIN_LOGIN -fail --WRONG_PASSWORD</div><div class="test-status">passed</div><div class="test-duration">0.382s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST --pass</div><div class="test-status">passed</div><div class="test-duration">0.362s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">To check the Companyid</div><div class="test-status">passed</div><div class="test-duration">0.169s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.153s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.347s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_companyId</div><div class="test-status">passed</div><div class="test-duration">0.158s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_requiredExperience</div><div class="test-status">passed</div><div class="test-duration">0.146s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_totalNoOfVaccancies</div><div class="test-status">passed</div><div class="test-duration">0.155s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_lastDateToApply</div><div class="test-status">passed</div><div class="test-duration">0.156s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_status</div><div class="test-status">passed</div><div class="test-duration">0.345s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST -fail --NO_isPremium</div><div class="test-status">passed</div><div class="test-duration">0.347s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Create_Job_Post</div><div class="test-title">CREATE_JOB_POST-fail --NO_skillAssessment</div><div class="test-status">passed</div><div class="test-duration">0.149s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Job_Post</div><div class="test-title">GET_ALL_JOB_POST --pass</div><div class="test-status">passed</div><div class="test-duration">0.169s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Job_Post</div><div class="test-title">GET_ALL_JOB_POST -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.357s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_Job_Post</div><div class="test-title">GET_ALL_JOB_POST -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_By_Company_ID</div><div class="test-title">GET_ALL_BY_COMPANY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.158s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_By_Company_ID</div><div class="test-title">GET_ALL_BY_COMPANY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.348s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_By_Company_ID</div><div class="test-title">GET_ALL_BY_COMPANY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.356s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_By_Company_ID</div><div class="test-title">GET_ALL_BY_COMPANY_ID -fail --NO_ID_MENTIONED</div><div class="test-status">passed</div><div class="test-duration">0.144s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_All_By_Company_ID</div><div class="test-title">GET_ALL_BY_COMPANY_ID -fail --ID_DOESN'T_EXIST</div><div class="test-status">passed</div><div class="test-duration">0.352s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_Job_Post_By_Id</div><div class="test-title">GET_JOB_POST_BY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.357s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_Job_Post_By_Id</div><div class="test-title">GET_JOB_POST_BY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.138s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_Job_Post_By_Id</div><div class="test-title">GET_JOB_POST_BY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.128s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_Job_Post_By_Id</div><div class="test-title">GET_ALL_JOB_POST_BY_ID -fail --NO_ID_MENTIONED</div><div class="test-status">passed</div><div class="test-duration">0.352s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Get_Job_Post_By_Id</div><div class="test-title">GET_JOB_POST_BY_ID -fail --ID_DOESN'T_EXIST</div><div class="test-status">passed</div><div class="test-duration">0.152s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.15s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.138s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --RANDOM_HARD-CODED_TOKEN</div><div class="test-status">passed</div><div class="test-duration">0.358s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_ID_MENTIONED</div><div class="test-status">passed</div><div class="test-duration">0.154s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_companyId</div><div class="test-status">passed</div><div class="test-duration">0.353s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_educationType</div><div class="test-status">passed</div><div class="test-duration">0.35s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_requiredExperience</div><div class="test-status">passed</div><div class="test-duration">0.351s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_totalNoOfVaccancies</div><div class="test-status">passed</div><div class="test-duration">0.149s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_jobPostedDate</div><div class="test-status">passed</div><div class="test-duration">0.158s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_lastDateToApply</div><div class="test-status">passed</div><div class="test-duration">0.138s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_status</div><div class="test-status">passed</div><div class="test-duration">0.361s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_isPremium</div><div class="test-status">passed</div><div class="test-duration">0.36s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_By_ID</div><div class="test-title">UPDATE_JOB_POST_BY_ID -fail --NO_skillAssessment</div><div class="test-status">passed</div><div class="test-duration">0.363s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_Status_By_ID</div><div class="test-title">UPDATE_JOB_POST_STATUS_BY_ID --pass</div><div class="test-status">passed</div><div class="test-duration">0.158s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_Status_By_ID</div><div class="test-title">UPDATE_JOB_POST_STATUS_BY_ID -fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.141s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Update_Job_Post_Status_By_ID</div><div class="test-title">UPDATE_JOB_POST_STATUS_BY_ID -fail --UNAUTHORIZED</div><div class="test-status">passed</div><div class="test-duration">0.354s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Job_Post_By_ID</div><div class="test-title">DELETE_JOB_POST_ID -pass</div><div class="test-status">passed</div><div class="test-duration">0.146s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Job_Post_By_ID</div><div class="test-title">DELETE_JOB_POST_BY_ID fail --WRONG_URL</div><div class="test-status">passed</div><div class="test-duration">0.153s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Job_Post_By_ID</div><div class="test-title">DELETE_JOB_POST_BY_ID fail --UNAUTHORIZATION</div><div class="test-status">passed</div><div class="test-duration">0.138s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Job_Post_By_ID</div><div class="test-title">DELETE_JOB_POST_BY_ID fail --RANDOM_HARD-CODED_TOKEN</div><div class="test-status">passed</div><div class="test-duration">0.14s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Delete_Job_Post_By_ID</div><div class="test-title">DELETE_JOB_POST_BY_ID fail --ID_DOESN'T_EXIST</div><div class="test-status">passed</div><div class="test-duration">0.357s</div></div></div></div></div></div></body></html>
