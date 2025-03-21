@@ -1,7 +1,7 @@
 var sup = require ('supertest');
 var auth = require('./token');
 //var con = require('./jest.config')
-var url = 'http://156.67.219.134:6060/api/v1/admin/'
+var url = 'enter the URL'
 var nmae = "IBM";
 var cid;
 var jid;
