@@ -1,6 +1,6 @@
 var sup = require ('supertest');
 var auth = require('./token');
-var url = 'http://156.67.219.134:6060/api/v1/admin/'
+var url = 'Enter the URL'
 var name  = "CEH"
 var examid;
 var examTrad_id;
